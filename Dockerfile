@@ -33,8 +33,7 @@ RUN wget http://10.120.29.29:18888/installment/0.6.13-alpha1-r3.tgz -O /installm
 RUN mkdir -p /opt/installment/modules/installment && tar xzf /installment.tgz -C /opt/installment/modules/installment && rm /installment.tgz
 
 ADD conf/embedded-webapp/embedded-webapp.conf /opt/installment/modules/embedded-webapp/
-ADD conf/installment/database.conf /opt/installment/modules/installment/
-ADD conf/installment/service-ac.conf /opt/installment/modules/installment/
+ADD conf/installment/* /opt/installment/modules/installment/
 
 EXPOSE 8383
 RUN mkdir -p /opt/installment/logs/ && touch /opt/installment/logs/installment.log
