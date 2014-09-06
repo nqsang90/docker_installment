@@ -34,6 +34,7 @@ RUN mkdir -p /opt/installment/modules/installment && tar xzf /installment.tgz -C
 
 ADD conf/embedded-webapp/embedded-webapp.conf /opt/installment/modules/embedded-webapp/
 ADD conf/installment/database.conf /opt/installment/modules/installment/
+ADD conf/installment/service-ac.conf /opt/installment/modules/installment/
 
 EXPOSE 8383
 RUN mkdir -p /opt/installment/logs/ && touch /opt/installment/logs/installment.log
